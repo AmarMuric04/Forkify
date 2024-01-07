@@ -1,5 +1,5 @@
 import icons from 'url:../../img/icons.svg'; /* Parcel 2 */
-import { Fraction } from 'fractional';
+const { Fraction } = require('fractional');
 import View from './View.js';
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
