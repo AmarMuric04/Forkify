@@ -1,5 +1,4 @@
 import icons from 'url:../../img/icons.svg'; /* Parcel 2 */
-const { Fraction } = require('fractional');
 import View from './View.js';
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
@@ -126,9 +125,7 @@ ${this._data.ingredients.map(this._generateIngredientHTML).join('')}
                 <use href="${icons}#icon-check"></use>
               </svg>
               <div class="recipe__quantity">${
-                ingredient.quantity
-                  ? new Fraction(ingredient.quantity).toString()
-                  : ' '
+                ingredient.quantity ? ingredient.quantity : ' '
               }</div>
               <div class="recipe__description">
                 <span class="recipe__unit">${ingredient.unit}</span>
